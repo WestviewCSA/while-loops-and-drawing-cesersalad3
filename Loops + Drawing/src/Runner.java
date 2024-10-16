@@ -31,7 +31,28 @@ public class Runner extends JPanel{
 		
 		
 		//4) small rectangles on top-left
-		g2.drawLine(765/4, 10, 765/4, 550/2-10);
+		//g2.drawLine(765/4, 10, 765/4, 550/2-10);
+		int var =  1;
+		while (var<=100){
+
+			int red = (int)(Math.random()*255); //generate a random red value
+		    int gre = (int)(Math.random()*255);
+		    int blu = (int)(Math.random()*255);
+
+		    Color newColor = new Color(red, gre, blu);
+		    g2.setColor(newColor);
+
+			g2.setStroke(new BasicStroke(1));
+			
+			g2.drawLine((int)(Math.random()*((765/2)-15+1))+15, (int)(Math.random()*(270-10+1))+10, (int)(Math.random()*((765/2)-15+1))+15, (int)(Math.random()*(270-10+1))+10);
+			
+			g2.fillRect((int)(Math.random()*(765-(756/2)-50+1))+765/2, (int)(Math.random()*(270-10-50+1))+10, 50, 50);
+			
+			int ovalSize = (int)(Math.random()*(200-10+1))+10;
+			g2.drawOval((int)(Math.random()*((756/2)-ovalSize-10+1))+10, (int) (Math.random()*(540-ovalSize-270+1))+270, ovalSize, ovalSize);
+			
+			var++;
+		}
 		
 		
 		/* 
