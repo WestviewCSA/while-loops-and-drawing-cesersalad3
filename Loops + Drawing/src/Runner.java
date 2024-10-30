@@ -60,10 +60,19 @@ public class Runner extends JPanel{
 			 
 			 g2.drawLine(0, 650-i, i, 0);//bottom left side
 			 
-			 g2.drawLine(1000, i, 1000-i, 650);//top right 
+			
+		 }
+		 
+		 int i2 = 0;
+		 
+		 while (i<=650) {
+			 
+			  g2.drawLine(1000, i, 1000-i, 650);//top right 
 			 
 			 g2.drawLine(1000, 650-i, 1000-i, 0);//bottom right
+			 
 		 }
+
 
 
 		/* 
